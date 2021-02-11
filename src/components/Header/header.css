@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #fff;
+}
+
+.left-container {
+  display: flex;
+  align-items: center;
+}
+
+.left-container img.linkedin-icon {
+  object-fit: contain;
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.left-container .search-container {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  height: 22px;
+  color: gray;
+  background-color: #eef3f8;
+}
+
+.search-container input.search-input {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+}
+
+.right-container p {
+  color: rgb(145, 89, 7);
+  font-size: 12px;
+}
+
+.right-container p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

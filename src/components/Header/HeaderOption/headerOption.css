@@ -1,0 +1,30 @@
+.header-option {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 1rem;
+  color: gray;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-option:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.header-option span {
+  font-size: 12px;
+}
+
+.header-option img.profile-img {
+  width: 1.75em;
+  height: 1.75em;
+  border-radius: 50%;
+  transition: transform 0.1s ease-in-out;
+  object-fit: contain;
+}
+
+.header-option img.profile-img:active {
+  transform: scale(0.9);
+}
