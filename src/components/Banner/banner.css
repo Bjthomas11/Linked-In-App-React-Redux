@@ -1,0 +1,38 @@
+.banner-container {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.banner-container a {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.banner-container a:hover {
+  text-decoration: underline;
+}
+
+.banner-container a span {
+  color: #0a66c2;
+}
+
+.banner-container span.outside {
+  color: #6e6d6c;
+  margin-left: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+span.outside .dot {
+  color: #5b5a59;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: color 0.2s linear;
+}
+
+span.outside .dot:hover {
+  color: #000;
+}

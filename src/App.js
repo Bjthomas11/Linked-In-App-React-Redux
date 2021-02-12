@@ -7,13 +7,15 @@ import MiddleFeed from "./components/MiddleFeed/MiddleFeed";
 import SideWidgets from "./components/SideWidgets/SideWidgets";
 import Footer from "./components/Footer/Footer";
 import ProfileImg from "./assets/profile.jpeg";
+import Banner from "./components/Banner/Banner";
 
 const App = () => {
   return (
     <>
       <Header />
-      {/* body */}
+
       <main className="main-body">
+        <Banner />
         <section className="inner-body-container">
           <Sidebar
             avatar={ProfileImg}
