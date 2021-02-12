@@ -2,3 +2,42 @@
   flex: 0.6;
   height: fit-content;
 }
+
+.middle-feed-container .sep-sorter {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.sep-sorter hr {
+  width: 90%;
+}
+
+.sep-sorter p {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 13px;
+}
+
+.sep-sorter p span {
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+
+@media screen and (max-width: 1034px) {
+  .middle-feed-container .sep-sorter {
+    display: block;
+  }
+
+  .sep-sorter hr {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .sep-sorter p {
+    width: 100%;
+  }
+}

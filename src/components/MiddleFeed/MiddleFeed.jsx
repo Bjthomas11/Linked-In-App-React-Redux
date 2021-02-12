@@ -7,7 +7,13 @@ const MiddleFeed = () => {
   return (
     <section className="middle-feed-container">
       <TopFeed />
-      sep <br /> middleFeed
+      <div className="sep-sorter">
+        <hr />
+        <p>
+          Sort by: <span>Top </span>
+        </p>
+      </div>
+      {/* feed */}
     </section>
   );
 };

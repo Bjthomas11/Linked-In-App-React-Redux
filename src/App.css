@@ -19,7 +19,8 @@ p {
 
 main.main-body {
   background-color: #f3f2ee;
-  height: 100vh;
+  height: 100%;
+  padding-bottom: 6rem;
 }
 
 section.inner-body-container {
