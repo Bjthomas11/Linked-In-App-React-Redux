@@ -1,3 +1,4 @@
-.container {
+.middle-feed-container {
   flex: 0.6;
+  height: fit-content;
 }
