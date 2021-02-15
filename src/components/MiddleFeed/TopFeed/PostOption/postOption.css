@@ -1,0 +1,38 @@
+.single-cat {
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background 0.2s linear;
+}
+
+.single-cat:hover {
+  cursor: pointer;
+  background: #ebebeb;
+}
+
+.single-cat span {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+}
+
+.single-cat svg {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+svg.photo {
+  color: #70b5f8;
+}
+
+svg.video {
+  color: #7fc05e;
+}
+
+svg.event {
+  color: #e7a33e;
+}
+
+svg.article {
+  color: #f5987d;
+}

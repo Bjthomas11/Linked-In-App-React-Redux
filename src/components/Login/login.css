@@ -1,0 +1,84 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  padding-top: 2rem;
+  width: 100%;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.login-container form input {
+  margin-bottom: 0.5rem;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  background-color: #eef3f8;
+  border: 1px solid #333;
+  color: gray;
+  width: 100%;
+}
+
+.login-container form input:focus {
+  border: 2px solid #0177b7;
+}
+
+.login-container img.linkedin-icon {
+  object-fit: contain;
+  height: 80px;
+  margin-bottom: 2rem;
+}
+
+.login-container button {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #0177b7;
+  color: #fff;
+  border: 2px solid #0177b7;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s linear;
+}
+
+.login-container button:hover {
+  background-color: #fff;
+  color: #0177b7;
+  border: 2px solid #0177b7;
+}
+
+.login-container button:focus {
+  outline: none;
+}
+
+.login-container .register-text {
+  color: gray;
+  text-align: center;
+}
+
+.register-text a {
+  text-decoration: none;
+  color: #0177b7;
+  font-weight: 600;
+  transition: all 0.3s linear;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+  color: #004e79;
+}
+
+@media screen and (min-width: 768px) {
+  .login-container form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+}

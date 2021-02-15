@@ -10,7 +10,7 @@ const Banner = () => {
         <span>$30K Tuition Scholarship - </span>Apply to Vanderbilt’s online
         M.S. in computer science program by March 12.
       </a>
-      <span class="outside">
+      <span className="outside">
         Ad <MoreHorizIcon className="dot" />
       </span>
     </div>

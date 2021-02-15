@@ -1,8 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../features/userSlice";
 
 import "./sidebar.css";
 
-const Sidebar = ({ avatar, profile_name, company }) => {
+const Sidebar = () => {
+  const user = useSelector(selectUser);
+
   const recentItem = (topic) => (
     <div className="recentItem">
       <span className="hash">#</span>
@@ -19,11 +23,22 @@ const Sidebar = ({ avatar, profile_name, company }) => {
             alt=""
             className="top-image"
           />
-          {avatar && (
-            <img src={avatar} alt="profile-img" className="profile-img" />
+          {user.email ? (
+            <img
+              src={user.photoURL}
+              alt="profile-img"
+              className="profile-img"
+            />
+          ) : (
+            <img
+              src={user.email[0]}
+              alt="profile-img"
+              className="profile-img"
+            />
           )}
-          <p className="name">{profile_name}</p>
-          <p className="company">{company}</p>
+
+          <p className="name">{user.displayName}</p>
+          <p className="company">company</p>
         </div>
         <div className="stats">
           <div className="stat">

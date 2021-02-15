@@ -13,6 +13,9 @@ import ProfileImg from "../../assets/profile.jpeg";
 import HeaderOption from "./HeaderOption/HeaderOption";
 
 import "./header.css";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, selectUser } from "../../features/userSlice";
+import { auth } from "../../firebase";
 
 const Header = () => {
   const isDesktopOrLaptop = useMediaQuery({
@@ -24,6 +27,14 @@ const Header = () => {
   const isMobile = useMediaQuery({
     query: "(max-width: 767px)",
   });
+
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+
+  const logoutClick = () => {
+    dispatch(logout());
+    auth.signOut();
+  };
   return (
     <div className="header">
       {isDesktopOrLaptop && (
@@ -52,7 +63,7 @@ const Header = () => {
             <HeaderOption title="Jobs" Icon={WorkIcon} />
             <HeaderOption title="Messaging" Icon={SmsIcon} />
             <HeaderOption title="Notifications" Icon={NotificationsIcon} />
-            <HeaderOption title="Me" avatar={ProfileImg} />
+            <HeaderOption title="Me" onClick={logoutClick} />
             <HeaderOption title="Work" Icon={ViewModuleIcon} />
             <p>
               Try Premium Free <br /> for 1 Month
@@ -86,7 +97,7 @@ const Header = () => {
             <HeaderOption Icon={WorkIcon} />
             <HeaderOption Icon={SmsIcon} />
             <HeaderOption Icon={NotificationsIcon} />
-            <HeaderOption avatar={ProfileImg} />
+            <HeaderOption avatar={ProfileImg} onClick={logoutClick} />
             <HeaderOption Icon={ViewModuleIcon} />
             <p>
               Try Premium Free <br /> for 1 Month
@@ -97,7 +108,7 @@ const Header = () => {
       {isMobile && (
         <>
           <div className="left-container">
-            <HeaderOption avatar={ProfileImg} />
+            <HeaderOption avatar={ProfileImg} onClick={logoutClick} />
 
             <div className="search-container mobile">
               <SearchIcon />
