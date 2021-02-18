@@ -46,7 +46,13 @@ const MiddleFeed = () => {
     <section className="middle-feed-container">
       <section className="top-feed-container">
         <div className="image-post-container">
-          <img src={ProfileImg} alt="profile-img" className="profile-img" />
+          {user.photoURL && (
+            <img
+              src={user.photoURL}
+              alt="profile-img"
+              className="profile-img"
+            />
+          )}
           <form>
             <input
               type="text"
