@@ -4,17 +4,20 @@ import { selectUser } from "../../../features/userSlice";
 
 import "./headerOption.css";
 
-const HeaderOption = ({ title, Icon, avatar, onClick }) => {
+const HeaderOption = ({ title, Icon, onClick, loggedOut, loggedIn }) => {
   const user = useSelector(selectUser);
+  console.log(user);
   return (
     <div className="header-option" onClick={onClick}>
       {Icon && <Icon className="option-icon" />}
-      {user.email ? (
-        <img src={user.photoURL} alt="profile-img" className="profile-img" />
-      ) : (
-        <img src={user.email[0]} alt="profile-img" className="profile-img" />
-      )}
       <span className="option-title">{title}</span>
+      {user ? (
+        <>
+          <span className="option-title">{loggedOut}</span>
+        </>
+      ) : (
+        <span className="option-title">{loggedIn}</span>
+      )}
     </div>
   );
 };

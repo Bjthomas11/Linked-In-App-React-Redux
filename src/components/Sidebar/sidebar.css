@@ -1,6 +1,6 @@
 .sidebar-container {
-  /* top: 80px;
-  position: sticky; */
+  top: 80px;
+  position: sticky;
   flex: 0.2;
   height: fit-content;
   margin-right: 2rem;
@@ -92,6 +92,7 @@ img.top-image {
   margin: 5px 0;
   cursor: pointer;
   padding: 5px 0;
+  transition: all 0.3s linear;
 }
 
 .recentItem p {

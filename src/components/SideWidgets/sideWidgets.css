@@ -1,10 +1,88 @@
 .side-widgets-container {
   flex: 0.2;
   margin-left: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  height: fit-content;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 15%), 0 2px 3px rgb(0 0 0 / 20%);
+  padding: 20px;
+  position: sticky;
+  top: 80px;
 }
 
+.widgets-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.widgets-header p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.article-container {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+  margin-left: auto;
+  width: 100%;
+  transition: all 0.3s linear;
+}
+
+.article-container:hover {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #000;
+  padding: 5px 5px;
+}
+
+.info-icon {
+  color: #666666;
+  cursor: pointer;
+}
+
+.article-container .icon {
+  width: 1rem;
+  height: 1rem;
+  color: #33aada;
+  margin-right: 0.75rem;
+  cursor: pointer;
+}
+
+.article-container .right .right-heading {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.article-container .right .right-subtitle {
+  font-size: 0.75rem;
+}
+
+span.more {
+  display: inline-block;
+  margin-top: 1rem;
+  transition: all 0.3s linear;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+span.more:hover {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px 5px;
+  color: #333;
+}
 @media screen and (max-width: 767px) {
   .side-widgets-container {
     margin-right: 0;
+    margin-left: 0;
+    margin-top: 2rem;
   }
 }

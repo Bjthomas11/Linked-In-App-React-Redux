@@ -23,15 +23,9 @@ const Sidebar = () => {
             alt=""
             className="top-image"
           />
-          {user.email ? (
+          {user.photoURL && (
             <img
               src={user.photoURL}
-              alt="profile-img"
-              className="profile-img"
-            />
-          ) : (
-            <img
-              src={user.email[0]}
               alt="profile-img"
               className="profile-img"
             />

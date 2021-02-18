@@ -11,6 +11,7 @@ import ViewModuleIcon from "@material-ui/icons/ViewModule";
 import LinkedInIconSvg from "../../assets/linkedin.svg";
 import ProfileImg from "../../assets/profile.jpeg";
 import HeaderOption from "./HeaderOption/HeaderOption";
+import PersonIcon from "@material-ui/icons/Person";
 
 import "./header.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -63,7 +64,12 @@ const Header = () => {
             <HeaderOption title="Jobs" Icon={WorkIcon} />
             <HeaderOption title="Messaging" Icon={SmsIcon} />
             <HeaderOption title="Notifications" Icon={NotificationsIcon} />
-            <HeaderOption title="Me" onClick={logoutClick} />
+            <HeaderOption
+              loggedOut="Logout"
+              loggedIn="Login"
+              onClick={logoutClick}
+              Icon={PersonIcon}
+            />
             <HeaderOption title="Work" Icon={ViewModuleIcon} />
             <p>
               Try Premium Free <br /> for 1 Month

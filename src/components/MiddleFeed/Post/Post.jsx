@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import PostOption from "../TopFeed/PostOption/PostOption";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
@@ -10,10 +10,10 @@ import "./post.css";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../../features/userSlice";
 
-const Post = ({ name, title, message, photoURL, avatar }) => {
+const Post = forwardRef(({ name, title, message, photoURL, avatar }, ref) => {
   const user = useSelector(selectUser);
   return (
-    <section className="post-container">
+    <section ref={ref} className="post-container">
       <div className="post-header">
         {avatar && (
           <img src={avatar} alt="profile-img" className="profile-img" />
@@ -35,6 +35,6 @@ const Post = ({ name, title, message, photoURL, avatar }) => {
       </div>
     </section>
   );
-};
+});
 
 export default Post;

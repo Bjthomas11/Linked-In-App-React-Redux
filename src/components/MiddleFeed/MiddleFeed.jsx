@@ -4,6 +4,7 @@ import ProfileImg from "../../assets/profile.jpeg";
 import Post from "./Post/Post";
 import { db } from "../../firebase";
 import firebase from "firebase";
+import FlipMove from "react-flip-move";
 
 import "./middleFeed.css";
 import { useSelector } from "react-redux";
@@ -69,17 +70,19 @@ const MiddleFeed = () => {
           Sort by: <span>Top </span>
         </p>
       </div>
-      {posts.map(({ id, data: { name, title, message, photoURL } }) => {
-        return (
-          <Post
-            key={id}
-            name={name}
-            title={title}
-            message={message}
-            photoURL={photoURL}
-          />
-        );
-      })}
+      <FlipMove>
+        {posts.map(({ id, data: { name, title, message, photoURL } }) => {
+          return (
+            <Post
+              key={id}
+              name={name}
+              title={title}
+              message={message}
+              photoURL={photoURL}
+            />
+          );
+        })}
+      </FlipMove>
     </section>
   );
 };
